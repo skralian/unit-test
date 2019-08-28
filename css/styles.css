@@ -1,0 +1,24 @@
+#rollResult {
+  text-align: center;
+  font-style: bold;
+}
+
+#playerTwoResult {
+
+}
+
+#player1, #player2 {
+  border-style: ridge;
+  margin: 20px;
+  color: blue;
+}
+
+body {
+  background-image: url("../images/dice.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color:white;
+}
