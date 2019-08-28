@@ -14,15 +14,16 @@ $("#roll").click(function(){
   console.log(number);
   player1.turnScore += number;
   var result = $("#rollResult").text(number);
-  // var result2 = $("#result2").text(number);
-  // player1.calculateScore(number);
-  // console.log(player1)
+
 });
 
 
 
 $("#hold").click(function(){
-player1.calculateTotal();
+   player1.calculateTotal();
+   this.totalScore = this.turnScore + this.totalScore;
+  var result2 = $("#playerOneResult").text(player1.totalScore);
+
 console.log(player1);
 });
 
