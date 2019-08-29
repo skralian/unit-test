@@ -19,6 +19,7 @@ $("#p1roll").click(function(event){
   var number = Math.ceil(Math.random() * 6);
     if(number === 1) {
     player1.turnScore = 0;
+    player1.calculateTotal();
     var result = $("#rollResult").text(number);
   } if (player1.totalScore >= 100){
     alert ("Player 1 wins!");
@@ -29,7 +30,10 @@ $("#p1roll").click(function(event){
 });
 
 $("#p1hold").click(function(event){
-   player1.calculateTotal();
+  if($("#rollResult").text() == 1) {
+  player1.turnScore = 0;
+}
+  player1.calculateTotal();
     var resultP1 = $("#playerOneResult").text(player1.totalScore);
   });
 
@@ -48,7 +52,9 @@ $("#p2roll").click(function(){
 });
 
 $("#p2hold").click(function(event){
-  event.preventDefault();
+  if($("#rollResult").text() == 1) {
+  player2.turnScore = 0;
+  }
    player2.calculateTotal();
     var resultP2 = $("#playerTwoResult").text(player2.totalScore);
   });
