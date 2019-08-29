@@ -35,22 +35,25 @@ $("#p1hold").click(function(event){
 
   $("#p2roll").click(function(){
     var number1 = Math.ceil(Math.random() * 6);
-    player2.turnScore += number1;
-    var result = $("#rollResult").text(number1);
-
+    // player2.turnScore += number1;
+    // var result = $("#rollResult").text(number1);
+    if(number1 === 1) {
+      player2.turnScore = 0;
+      var result = $("#rollResult").text(number1);
+    } else {
+      player2.turnScore += number1;
+      var result = $("#rollResult").text(number1);
+    };
   });
 
   $("#p2hold").click(function(event){
     event.preventDefault();
      player2.calculateTotal();
-      var resultP1 = $("#playerTwoResult").text(player2.totalScore);
+      var resultP2 = $("#playerTwoResult").text(player2.totalScore);
     });
 
 
 Player.prototype.calculateTotal = function() {
  this.totalScore = this.turnScore + this.totalScore;
-
 }
-
-
 });
