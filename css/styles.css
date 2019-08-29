@@ -1,26 +1,45 @@
 #rollResult {
   text-align: center;
-  font-style: bold;
+  font-size: 50px;
+  font-weight: bold;
+  color: red;
 }
 
-#playerTwoResult {
-
+#playerTwoResult, #playerOneResult {
+  color: #ff751a;
+  font-weight: bold;
+  font-size: 30px;
 }
 
-#player1, #player2 {
-  border-style: ridge;
-  margin: 20px;
-  color: blue;
+#player1div, #player2div {
+  text-align: center;
 }
 
-/* body {
+#p1color {
+  color: white;
+}
+#p2color {
+  color: white;
+  margin-top: 20px;
+}
+
+
+body {
   background-image: url("../images/dice.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-} */
-
-h1 {
-  color:black;
 }
 
-Photo by Erik Mclean on Unsplash
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+}
+h2{
+  text-align: center;
+}
+.descrp {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
